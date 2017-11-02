@@ -4,6 +4,7 @@ import json
 
 count = 0
 
+
 def line_notification(alert_message):
     headers = {'authorization': 'Bearer kHAuKPObW0Bc2kt2ltt1TEQhgbsXmfkAL1LR97OOUXh'}
     url = 'https://notify-api.line.me/api/notify'
@@ -24,8 +25,8 @@ def executeSomething():
     current_btc_price = json_data["1"]["last_price"]
 
 
-    if(current_btc_price>230100):
-        line_notification("HIGHER THAN 230100")
+    if(current_btc_price>249000):
+        line_notification("HIGHER THAN 249000")
     elif(current_btc_price<221000):
         line_notification("LOWER THAN 221000")
     else:
